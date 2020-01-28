@@ -5,9 +5,11 @@
     <string name="gameMode">Spiel-Modus</string>
     <string name="playerCount">Anzahl Spieler</string>
     <string name="pointsRemaining">Verbleibende Punkte</string>
+    <string name="inputScore">Geworfener Score:</string>
 
     <!-- Button Strings -->>
     <string name="starterPlayerCount">1</string>
     <string name="starterGameMode">301</string>
+    <string name="submitScore">Bestätigen</string>
     <string name="startGame">Spielen</string>
 </resources>

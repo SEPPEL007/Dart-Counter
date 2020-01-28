@@ -2,6 +2,7 @@ package com.example.dart_counter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,8 +23,12 @@ public class MainActivity extends AppCompatActivity {
         startGame = findViewById(R.id.startGame);
 
         startGame.setOnClickListener(new View.OnClickListener(){
+            @Override
             public void onClick(View v) {
-                //start game
+                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                i.putExtra("playerCount", playerCountButton.getText().toString());
+                i.putExtra("gameMode", gameModeButton.getText().toString());
+                startActivity(i);
             }
         });
 
