@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     public Button gameModeButton;
     public Button playerCountButton;
+    public Button startGame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
         gameModeButton = findViewById(R.id.gameModeButton);
         playerCountButton = findViewById(R.id.playerCountButton);
+        startGame = findViewById(R.id.startGame);
+
+        startGame.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                //start game
+            }
+        });
 
         gameModeButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {

@@ -4,8 +4,10 @@
     <!-- Text-Field Strings -->>
     <string name="gameMode">Spiel-Modus</string>
     <string name="playerCount">Anzahl Spieler</string>
+    <string name="pointsRemaining">Verbleibende Punkte</string>
 
     <!-- Button Strings -->>
     <string name="starterPlayerCount">1</string>
     <string name="starterGameMode">301</string>
+    <string name="startGame">Spielen</string>
 </resources>
