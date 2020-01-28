@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Dart-Counter</string>
+
+    <!-- Text-Field Strings -->>
+    <string name="gameMode">Spiel-Modus</string>
+    <string name="playerCount">Anzahl Spieler</string>
+
+    <!-- Button Strings -->>
+    <string name="starterPlayerCount">1</string>
+    <string name="starterGameMode">301</string>
 </resources>
