@@ -4,12 +4,20 @@
     <!-- Text-Field Strings -->>
     <string name="gameMode">Spiel-Modus</string>
     <string name="playerCount">Anzahl Spieler</string>
-    <string name="pointsRemaining">Verbleibende Punkte</string>
+    <string name="pointsRemaining">Punkte</string>
     <string name="inputScore">Geworfener Score:</string>
+    <string name="win">Sie haben gewonnen!</string>
+    <string name="currentPlayer">Spieler</string>
+    <string name="playerName">1. Spieler</string>
+    <string name="playerName2">2. Spieler</string>
+    <string name="playerName3">3. Spieler</string>
+    <string name="playerName4">4. Spieler</string>
+    <string name="überworfen">Überworfen</string>
 
     <!-- Button Strings -->>
     <string name="starterPlayerCount">1</string>
     <string name="starterGameMode">301</string>
     <string name="submitScore">Bestätigen</string>
     <string name="startGame">Spielen</string>
+    <string name="title_activity_finish_screen">FinishScreen</string>
 </resources>

@@ -6,12 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
     public Button gameModeButton;
     public Button playerCountButton;
     public Button startGame;
+    public EditText playerName1;
+    public EditText playerName2;
+    public EditText playerName3;
+    public EditText playerName4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         gameModeButton = findViewById(R.id.gameModeButton);
         playerCountButton = findViewById(R.id.playerCountButton);
         startGame = findViewById(R.id.startGame);
+        playerName1 = findViewById(R.id.playerName1);
+        playerName2 = findViewById(R.id.playerName2);
+        playerName3 = findViewById(R.id.playerName3);
+        playerName4 = findViewById(R.id.playerName4);
 
         startGame.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -28,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), GameActivity.class);
                 i.putExtra("playerCount", playerCountButton.getText().toString());
                 i.putExtra("gameMode", gameModeButton.getText().toString());
+                i.putExtra("playerName1", playerName1.getText().toString());
+                i.putExtra("playerName2", playerName2.getText().toString());
+                i.putExtra("playerName3", playerName3.getText().toString());
+                i.putExtra("playerName4", playerName4.getText().toString());
                 startActivity(i);
             }
         });
@@ -50,8 +63,19 @@ public class MainActivity extends AppCompatActivity {
     public void playerNumberChange(){
         if (Integer.parseInt(playerCountButton.getText().toString()) == 4){
             playerCountButton.setText("1");
+            playerName2.setVisibility(View.INVISIBLE);
+            playerName3.setVisibility(View.INVISIBLE);
+            playerName4.setVisibility(View.INVISIBLE);
         } else {
-            playerCountButton.setText(String.valueOf(Integer.parseInt(playerCountButton.getText().toString()) + 1));
+            int index = Integer.parseInt(playerCountButton.getText().toString()) + 1;
+            playerCountButton.setText(String.valueOf(index));
+            if (index == 2){
+                playerName2.setVisibility(View.VISIBLE);
+            } else if (index == 3){
+                playerName3.setVisibility(View.VISIBLE);
+            } else {
+                playerName4.setVisibility(View.VISIBLE);
+            }
         }
     }
 
