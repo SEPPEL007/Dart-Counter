@@ -58,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void playerManagement(View v){
+        Intent i = new Intent(getApplicationContext(), PlayerManagement.class);
+        startActivity(i);
+    }
+
     //Adds 1 to the player count
     //returns to 1 when reaching 4
     public void playerNumberChange(){

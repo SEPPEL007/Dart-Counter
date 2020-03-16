@@ -18,6 +18,8 @@
     <string name="starterPlayerCount">1</string>
     <string name="starterGameMode">301</string>
     <string name="submitScore">Bestätigen</string>
+    <string name="playerManagement">Spieler Management</string>
+    <string name="createPlayer">Neuer Spieler</string>
     <string name="startGame">Spielen</string>
     <string name="title_activity_finish_screen">FinishScreen</string>
 </resources>

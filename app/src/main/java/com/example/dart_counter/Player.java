@@ -2,7 +2,7 @@ package com.example.dart_counter;
 
 import java.util.ArrayList;
 
-public class Player {
+public class Player implements java.io.Serializable {
 
     public String name;
     public ArrayList<Integer> currentScores;

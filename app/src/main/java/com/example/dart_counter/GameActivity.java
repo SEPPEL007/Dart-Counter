@@ -2,13 +2,20 @@ package com.example.dart_counter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 public class GameActivity extends AppCompatActivity {
@@ -92,6 +99,17 @@ public class GameActivity extends AppCompatActivity {
             i.putExtra("finish", String.valueOf(score));
             i.putExtra("average", "" + game.getAverage(currentPlayer.getText().toString()));
             startActivity(i);
+            /*try{
+
+                ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(getFilesDir() + "game.ser"));
+                out.writeObject(game);
+                out.flush();
+                out.close();
+            } catch (Exception ex){
+                currentPlayer.setText(ex.toString());
+                Toast toast = Toast.makeText(getApplicationContext(), ex.toString(), Toast.LENGTH_LONG);
+                toast.show();
+            }*/
             finish();
         }
         nextPlayer();

@@ -2,7 +2,7 @@ package com.example.dart_counter;
 
 import java.util.ArrayList;
 
-public class Game {
+public class Game implements java.io.Serializable {
 
     public int playerCount;
     public int maxPoints;
